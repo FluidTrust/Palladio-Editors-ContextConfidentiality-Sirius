@@ -4,7 +4,7 @@
     <semanticResources>My.context</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_ovufcKA9EeqXwNNl98vXdQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_hCS6h6TvEeq0vsip_cjQSQ" name="new ContextConfidentiality Diagram" repPath="#_hCRsYKTvEeq0vsip_cjQSQ" changeId="69a50ae7-6e42-42dc-85bf-44372673e3f1">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_hCS6h6TvEeq0vsip_cjQSQ" name="new ContextConfidentiality Diagram" repPath="#_hCRsYKTvEeq0vsip_cjQSQ" changeId="14704662-d31b-40f5-ab81-ae315df7185a">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']"/>
         <target xmi:type="context:ConfidentialAccessSpecification" href="My.context#/"/>
       </ownedRepresentationDescriptors>
@@ -242,38 +242,6 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wb93tqYxEeq0vsip_cjQSQ" id="(0.40540540540540543,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Wb93t6YxEeq0vsip_cjQSQ" id="(1.0,0.29411764705882354)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_owZRUKYxEeq0vsip_cjQSQ" type="4001" element="_owXcIKYxEeq0vsip_cjQSQ" source="_qz7zsKTvEeq0vsip_cjQSQ" target="_xpxM0KUgEeq0vsip_cjQSQ">
-          <children xmi:type="notation:Node" xmi:id="_owZRVKYxEeq0vsip_cjQSQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_owZRVaYxEeq0vsip_cjQSQ" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_owZ4YKYxEeq0vsip_cjQSQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_owZ4YaYxEeq0vsip_cjQSQ" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_owZ4YqYxEeq0vsip_cjQSQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_owZ4Y6YxEeq0vsip_cjQSQ" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_owZRUaYxEeq0vsip_cjQSQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_owZRUqYxEeq0vsip_cjQSQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_owZRU6YxEeq0vsip_cjQSQ" points="[0, 0, 0, 32]$[0, -32, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_owZ4ZKYxEeq0vsip_cjQSQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_owZ4ZaYxEeq0vsip_cjQSQ" id="(0.5,1.0)"/>
-        </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_owZ4ZqYxEeq0vsip_cjQSQ" type="4001" element="_owYqVKYxEeq0vsip_cjQSQ" source="_qz7zsKTvEeq0vsip_cjQSQ" target="_xpxM0KUgEeq0vsip_cjQSQ">
-          <children xmi:type="notation:Node" xmi:id="_owZ4aqYxEeq0vsip_cjQSQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_owZ4a6YxEeq0vsip_cjQSQ" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_owZ4bKYxEeq0vsip_cjQSQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_owZ4baYxEeq0vsip_cjQSQ" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_owZ4bqYxEeq0vsip_cjQSQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_owZ4b6YxEeq0vsip_cjQSQ" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_owZ4Z6YxEeq0vsip_cjQSQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_owZ4aKYxEeq0vsip_cjQSQ" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_owZ4aaYxEeq0vsip_cjQSQ" points="[0, 0, 0, 32]$[0, -32, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_owZ4cKYxEeq0vsip_cjQSQ" id="(0.5,0.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_owZ4caYxEeq0vsip_cjQSQ" id="(0.5,1.0)"/>
-        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_hCSTcaTvEeq0vsip_cjQSQ" name="Policy Container">
@@ -319,7 +287,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qz4wYaTvEeq0vsip_cjQSQ" name="RelatedContextSet" outgoingEdges="_owXcIKYxEeq0vsip_cjQSQ _owYqVKYxEeq0vsip_cjQSQ" incomingEdges="_czT09KUYEeq0vsip_cjQSQ _ucc14qUYEeq0vsip_cjQSQ _qCSTgqUfEeq0vsip_cjQSQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qz4wYaTvEeq0vsip_cjQSQ" name="RelatedContextSet" incomingEdges="_czT09KUYEeq0vsip_cjQSQ _ucc14qUYEeq0vsip_cjQSQ _qCSTgqUfEeq0vsip_cjQSQ">
         <target xmi:type="model:RelatedContextSet" href="My.context#_qz4wYKTvEeq0vsip_cjQSQ"/>
         <semanticElements xmi:type="model:RelatedContextSet" href="My.context#_qz4wYKTvEeq0vsip_cjQSQ"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -341,7 +309,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_xpuwkaUgEeq0vsip_cjQSQ" name="C" outgoingEdges="_Wb7beKYxEeq0vsip_cjQSQ" incomingEdges="_owXcIKYxEeq0vsip_cjQSQ _owYqVKYxEeq0vsip_cjQSQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_xpuwkaUgEeq0vsip_cjQSQ" name="C" outgoingEdges="_Wb7beKYxEeq0vsip_cjQSQ">
         <target xmi:type="model:HierachicalContext" href="My.context#_xpuwkKUgEeq0vsip_cjQSQ"/>
         <semanticElements xmi:type="model:HierachicalContext" href="My.context#_xpuwkKUgEeq0vsip_cjQSQ"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -444,22 +412,6 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Wb7beaYxEeq0vsip_cjQSQ" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='hierarchicalContextParentRelation']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Wb7beqYxEeq0vsip_cjQSQ" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='hierarchicalContextParentRelation']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_owXcIKYxEeq0vsip_cjQSQ" name="context" sourceNode="_qz4wYaTvEeq0vsip_cjQSQ" targetNode="_xpuwkaUgEeq0vsip_cjQSQ">
-      <target xmi:type="model:RelatedContextSet" href="My.context#_qz4wYKTvEeq0vsip_cjQSQ"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_owXcIaYxEeq0vsip_cjQSQ" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='contextContextRelation']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_owXcIqYxEeq0vsip_cjQSQ" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='contextContextRelation']"/>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_owYqVKYxEeq0vsip_cjQSQ" name="parent" sourceNode="_qz4wYaTvEeq0vsip_cjQSQ" targetNode="_xpuwkaUgEeq0vsip_cjQSQ">
-      <target xmi:type="model:RelatedContextSet" href="My.context#_qz4wYKTvEeq0vsip_cjQSQ"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_owYqVaYxEeq0vsip_cjQSQ" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='hierarchicalContextParentRelation']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_owYqVqYxEeq0vsip_cjQSQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/contextConfidentialityEditor.design/description/contextConfidentialityEditor.odesign#//@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='hierarchicalContextParentRelation']"/>
     </ownedDiagramElements>

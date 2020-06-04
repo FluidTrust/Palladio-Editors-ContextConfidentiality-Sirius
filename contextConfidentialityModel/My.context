@@ -5,7 +5,7 @@
   </policyContainer>
   <contextcontainer id="_hCRsYqTvEeq0vsip_cjQSQ" entityName="Context Container">
     <context xsi:type="model:HierachicalContext" id="_kXAzkKTvEeq0vsip_cjQSQ" entityName="root"/>
-    <context xsi:type="model:RelatedContextSet" id="_qz4wYKTvEeq0vsip_cjQSQ" entityName="RelatedContextSet" context="_xpuwkKUgEeq0vsip_cjQSQ"/>
+    <context xsi:type="model:RelatedContextSet" id="_qz4wYKTvEeq0vsip_cjQSQ" entityName="RelatedContextSet"/>
     <context xsi:type="model:SingleAttributeContext" id="_r9RaUKTvEeq0vsip_cjQSQ" entityName="SingleAttributeContext"/>
     <context xsi:type="model:HierachicalContext" id="_xpuwkKUgEeq0vsip_cjQSQ" entityName="C" parent="_kXAzkKTvEeq0vsip_cjQSQ"/>
     <context xsi:type="model:HierachicalContext" id="_y6MS4KUgEeq0vsip_cjQSQ" entityName="B" parent="_kXAzkKTvEeq0vsip_cjQSQ"/>

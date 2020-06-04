@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:ConfidentialAccessSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.palladiosimulator.org/pcm/confidentiality/0.1/" xmlns:model="http://www.palladiosimulator.org/pcm/confidentiality/context/model/0.1/">
+  <policyContainer id="_hCRsYaTvEeq0vsip_cjQSQ" entityName="Policy Container">
+    <policies id="_jJ6uUKTvEeq0vsip_cjQSQ" entityName="Policy1" contexts="_kXAzkKTvEeq0vsip_cjQSQ _qz4wYKTvEeq0vsip_cjQSQ"/>
+  </policyContainer>
+  <contextcontainer id="_hCRsYqTvEeq0vsip_cjQSQ" entityName="Context Container">
+    <context xsi:type="model:HierachicalContext" id="_kXAzkKTvEeq0vsip_cjQSQ" entityName="root"/>
+    <context xsi:type="model:RelatedContextSet" id="_qz4wYKTvEeq0vsip_cjQSQ" entityName="RelatedContextSet" context="_xpuwkKUgEeq0vsip_cjQSQ"/>
+    <context xsi:type="model:SingleAttributeContext" id="_r9RaUKTvEeq0vsip_cjQSQ" entityName="SingleAttributeContext"/>
+    <context xsi:type="model:HierachicalContext" id="_xpuwkKUgEeq0vsip_cjQSQ" entityName="C" parent="_kXAzkKTvEeq0vsip_cjQSQ"/>
+    <context xsi:type="model:HierachicalContext" id="_y6MS4KUgEeq0vsip_cjQSQ" entityName="B" parent="_kXAzkKTvEeq0vsip_cjQSQ"/>
+    <context xsi:type="model:HierachicalContext" id="_1LrNUKUgEeq0vsip_cjQSQ" entityName="A" parent="_kXAzkKTvEeq0vsip_cjQSQ"/>
+  </contextcontainer>
+</context:ConfidentialAccessSpecification>

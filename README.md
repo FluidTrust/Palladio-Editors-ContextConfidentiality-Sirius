@@ -24,7 +24,7 @@ The project is built with:
 
 Following dependencies exist:
 
-* [Palladio Component Model](https://sdqweb.ipd.kit.edu/wiki/PCM_Installation#PCM_Nightly)
+* [Palladio Component Model](https://sdqweb.ipd.kit.edu/wiki/Palladio_Component_Model)
 * [Context Metamodel](https://github.com/Trust40-Project/Palladio-Addons-DataProcessing-DynamicExtension-ContextModel/tree/context2.0)
 * [MDSD Profiles](https://sdqweb.ipd.kit.edu/wiki/MDSDProfiles)
 

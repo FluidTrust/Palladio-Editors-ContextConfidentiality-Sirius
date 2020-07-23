@@ -8,16 +8,12 @@ This project implements a Sirius-Editor for the Context Confidentiality Metamode
 
 The project was implemented within the scope of the practical master course *Ingenieursmäßige Software-Entwicklung* at the Karlsruhe Institute of Technology.
 
----
-
 ## Table of contents
 * [Technologies](#technologies)
 * [Further Development](#further-Development)
 * [Functionalities](#functionalities)
 * [Design decisions](#design-decisions)
 * [Authors](#authors)
-
----
 
 ## Technologies:
 The project is built with:

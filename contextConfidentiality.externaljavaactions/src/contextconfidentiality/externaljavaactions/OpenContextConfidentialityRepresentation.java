@@ -19,6 +19,13 @@ import org.palladiosimulator.editors.sirius.custom.util.SiriusCustomUtil;
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.policy.Policy;
 
+/** 
+ * External Java Action that opens the representation of a selected policy.
+ * If it does not exist it creates a new representation and opens it.
+ * 
+ * @author Cynthia Diedrich
+ * 
+ */
 public class OpenContextConfidentialityRepresentation implements IExternalJavaAction {
 
 	public OpenContextConfidentialityRepresentation() { }
@@ -27,7 +34,17 @@ public class OpenContextConfidentialityRepresentation implements IExternalJavaAc
 	public boolean canExecute(Collection<? extends EObject> arg0) {
 		return true;
 	}
-
+	
+	/**
+	 * Opens the representation of a selected policy. 
+	 * 
+	 * @param parameters Following parameters must be specified:
+	 *  element: The element whose representation is to be opened
+	 *  Viewpoint: The name of the Viewpoint of the representation
+	 * 	RepresentationDescription: The name of the RepresentationDescription in the selected Viewpoint
+	 * 	Diagram name: Optional
+	 * 
+	 */
 	@Override
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
 		EObject semantic = (EObject) parameters.get("element");

@@ -11,11 +11,20 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 import org.palladiosimulator.pcm.confidentiality.context.policy.Policy;
 
-
-/* 
- * Select Policy from Chosen Resource 
+/** 
+ * Service that opens a dialog for selection of a policy of a specific resource.
+ * 
+ * @author Cynthia Diedrich
+ * 
  */
 public class OpenPolicyDialog {
+	/** 
+	 * Opens Policy Dialog with specified Elements
+	 * 
+	 * @param policyList Contains a List with Policy Elements
+	 * @return EObject The selected Policy
+	 * 
+	 */
 	public static EObject loadPolicy(EList<Policy> policyList) {	
 		Shell shell = Display.getCurrent().getActiveShell(); 
 		shell = getShell();

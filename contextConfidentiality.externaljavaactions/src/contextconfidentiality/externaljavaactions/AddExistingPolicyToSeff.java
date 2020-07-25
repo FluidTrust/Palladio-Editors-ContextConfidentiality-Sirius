@@ -16,6 +16,7 @@ import org.eclipse.sirius.business.api.session.danalysis.DAnalysisSession;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
+import org.palladiosimulator.pcm.confidentiality.context.impl.ConfidentialAccessSpecificationImpl;
 import org.palladiosimulator.pcm.confidentiality.context.policy.Policy;
 import org.palladiosimulator.pcm.seff.ResourceDemandingSEFF;
 import contextconfidentiality.service.ApplyProfilesStereotypes;
@@ -25,6 +26,12 @@ import contextconfidentiality.service.PolicyVisibility;
 import contextconfidentiality.service.OpenResourceDialog.ResourceObject;
 import java.util.logging.Logger;
 
+/** 
+ * External Java Action that adds an existing Policy to a SEFF Diagram.
+ * 
+ * @author Cynthia Diedrich
+ * 
+ */
 public class AddExistingPolicyToSeff implements IExternalJavaAction {
 	private static Logger logger = Logger.getLogger(AddExistingPolicyToSeff.class.getName());
 	
@@ -35,15 +42,20 @@ public class AddExistingPolicyToSeff implements IExternalJavaAction {
 		return true;
 	}
 
+	/** 
+	 * Adds a selected Policy from a certain Resource to a SEFF Diagram.
+	 * 
+	 * @param parameters Following variables must be specified: container and containerView
+	 * 
+	 */
 	@Override
-	public void execute(Collection<? extends EObject> arg0, Map<String, Object> arg1) {
-		ResourceDemandingSEFF seff = (ResourceDemandingSEFF) arg1.get("container");
-		DSemanticDiagram seffDiagram = (DSemanticDiagram) arg1.get("containerView");
+	public void execute(Collection<? extends EObject> arg0, Map<String, Object> parameters) {
+		ResourceDemandingSEFF seff = (ResourceDemandingSEFF) parameters.get("container");
+		DSemanticDiagram seffDiagram = (DSemanticDiagram) parameters.get("containerView");
 
 		ResourceObject confResourceObject = OpenResourceDialog.loadResource(seff, logger);
 		ConfidentialAccessSpecification confRoot = (confResourceObject != null 
-				&& confResourceObject.getRoot().getClass().getSimpleName()
-				.contentEquals("ConfidentialAccessSpecificationImpl")) 
+				&& confResourceObject.getRoot() instanceof ConfidentialAccessSpecificationImpl) 
 				? (ConfidentialAccessSpecification) confResourceObject.getRoot() : null;
 		
 		EList <Policy> policyList = (confRoot != null) ? confRoot.getPolicyContainer().getPolicies() : null;

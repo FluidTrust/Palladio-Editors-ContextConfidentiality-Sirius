@@ -39,7 +39,7 @@
             </style>
           </edgeMappings>
           <containerMappings name="ContextContainer" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ContextEntityName']" domainClass="model::Context">
-            <subContainerMappings name="ContextAttribute" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ContextEntityName']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='Set%20TOPDOWN_BOTTOMUP']" domainClass="model::ContextAttribute">
+            <subContainerMappings name="ContextAttribute" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ContextEntityName']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Set%20TOPDOWN_BOTTOMUP']" domainClass="model::ContextAttribute">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:entityName">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -110,6 +110,15 @@
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
+            <ownedTools xsi:type="tool_1:DoubleClickDescription" name="Set TOPDOWN_BOTTOMUP" mappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ExternalJavaAction" name="Set Direction" id="SetDirection">
+                  <parameters name="element" value="var:element"/>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
           </toolSections>
         </defaultLayer>
         <additionalLayers name="PolicyLayer">
@@ -161,15 +170,6 @@
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
                   <subModelOperations xsi:type="tool:SetValue" featureName="contexts" valueExpression="var:target"/>
-                </firstModelOperations>
-              </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool_1:DoubleClickDescription" name="Set TOPDOWN_BOTTOMUP" mappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']">
-              <element name="element"/>
-              <elementView name="elementView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool:ExternalJavaAction" name="Set Direction" id="SetDirection">
-                  <parameters name="element" value="var:element"/>
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>

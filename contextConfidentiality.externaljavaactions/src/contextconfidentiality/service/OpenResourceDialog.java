@@ -14,12 +14,22 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 
-
-/* 
- * Select Resource from which to add policy 
+/** 
+ * Service that opens a resource dialog for resource selection.
+ * 
+ * @author Cynthia Diedrich
+ * 
  */
 public class OpenResourceDialog {
-	public static ResourceObject loadResource(EObject self, Logger logger) {
+	/** 
+	 * Opens Resource Dialog
+	 * 
+	 * @param seff A ResourceDemandingSEFF Element
+	 * @param logger
+	 * @return ResourceObject A ResourceObject containing the root element and the resource
+	 * 
+	 */
+	public static ResourceObject loadResource(EObject seff, Logger logger) {
 		Shell shell = Display.getCurrent().getActiveShell();		
 		shell = getShell();
 		shell.open();
@@ -29,7 +39,7 @@ public class OpenResourceDialog {
 		if (dialog.open() == Dialog.OK) {
 			String uri = dialog.getURIText();
 			logger.info("Selected Resource: " + uri);
-	        ResourceSet resSet = self.eResource().getResourceSet();
+	        ResourceSet resSet = seff.eResource().getResourceSet();
 	        Resource resource = resSet.getResource(URI.createURI(uri), true);
 			EObject root = resource.getContents().get(0);
 			

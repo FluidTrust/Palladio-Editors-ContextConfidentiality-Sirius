@@ -7,9 +7,22 @@ import org.eclipse.sirius.diagram.DDiagramElementContainer;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.diagram.business.api.helper.graphicalfilters.HideFilterHelper;
 import org.palladiosimulator.pcm.confidentiality.context.policy.Policy;
+import org.palladiosimulator.pcm.confidentiality.context.policy.impl.PolicyImpl;
 
-/* Only show selected Policy --> hide unselected Policies */
+/** 
+ * Service that hides unselected policies.
+ * 
+ * @author Cynthia Diedrich
+ * 
+ */
 public class PolicyVisibility {
+	/** 
+	 * Shows or hides containers according to the selection
+	 * 
+	 * @param chosenPolicy A Policy Element
+	 * @param diagram A DSemanticDiagram Element
+	 * 
+	 */
 	public static void showHideContainers(Policy chosenPolicy, DSemanticDiagram diagram) {
 		
 		EList<DDiagramElementContainer> containers = diagram.getContainers();
@@ -22,8 +35,8 @@ public class PolicyVisibility {
 				
 				for (EObject crossReference : elementCrossReferences) {					
 					
-					Policy policyCrossReference = (crossReference.getClass().getSimpleName().
-							contentEquals("PolicyImpl")) ? ((Policy) crossReference) : null;
+					Policy policyCrossReference = (crossReference instanceof PolicyImpl) 
+							? ((Policy) crossReference) : null;
 					
 					if (policyCrossReference != null 
 							&& !policyCrossReference.getId().contains(chosenPolicy.getId())) {

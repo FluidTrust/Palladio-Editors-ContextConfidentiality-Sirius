@@ -17,7 +17,7 @@ import org.eclipse.sirius.diagram.DSemanticDiagram;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 import org.palladiosimulator.pcm.confidentiality.context.ConfidentialAccessSpecification;
 import org.palladiosimulator.pcm.confidentiality.context.impl.ConfidentialAccessSpecificationImpl;
-import org.palladiosimulator.pcm.confidentiality.context.policy.Policy;
+import org.palladiosimulator.pcm.confidentiality.context.specification.PolicySpecification.*;
 import org.palladiosimulator.pcm.seff.ResourceDemandingSEFF;
 import contextconfidentiality.service.ApplyProfilesStereotypes;
 import contextconfidentiality.service.OpenPolicyDialog;

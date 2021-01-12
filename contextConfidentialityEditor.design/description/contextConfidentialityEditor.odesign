@@ -4,8 +4,8 @@
     <ownedViewpoints name="ContextConfidentiality Viewpoint">
       <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ContextConfidentiality Diagram" domainClass="context::ConfidentialAccessSpecification">
         <metamodel href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#//model"/>
-        <metamodel href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#//policy"/>
         <metamodel href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#/"/>
+        <metamodel href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#//specification"/>
         <filters xsi:type="filter:CompositeFilterDescription" name="PolicyFilter">
           <filters xsi:type="filter:VariableFilter" semanticConditionExpression="aql:not policyfilter->includes(self)">
             <ownedVariables xsi:type="tool:SelectModelElementVariable" name="policyfilter" candidatesExpression="aql:self.pcmspecificationcontainer.policyspecification.policy"/>
@@ -14,7 +14,7 @@
         <diagramInitialisation>
           <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="specification::PolicySpecification" referenceName="policyContainer">
-              <subModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="Policy Container"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="PolicyContainer"/>
             </subModelOperations>
             <subModelOperations xsi:type="tool:CreateInstance" typeName="model::ContextContainer" referenceName="contextcontainer">
               <subModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="Context Container"/>

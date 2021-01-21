@@ -22,7 +22,7 @@
           </firstModelOperations>
         </diagramInitialisation>
         <defaultLayer name="Default">
-          <edgeMappings name="hierarchicalContextParentRelation" sourceMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']" targetMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']" targetFinderExpression="feature:parent">
+          <edgeMappings name="hierarchicalContextParentRelation" sourceMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']" targetMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']" targetFinderExpression="feature:including">
             <style sizeComputationExpression="2">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <centerLabelStyleDescription labelSize="12" labelExpression="parent">
@@ -95,7 +95,7 @@
               <targetViewVariable name="targetView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="parent" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="including" valueExpression="var:including"/>
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
@@ -106,7 +106,7 @@
               <targetViewVariable name="targetView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="context" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="context" valueExpression="var:contextset"/>
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
@@ -122,7 +122,7 @@
           </toolSections>
         </defaultLayer>
         <additionalLayers name="PolicyLayer">
-          <edgeMappings name="policyContextRelation" sourceMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@containerMappings[name='PolicyContainer']/@subContainerMappings[name='Policy']" targetMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']" targetFinderExpression="feature:contexts">
+          <edgeMappings name="policyContextRelation" sourceMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@containerMappings[name='PolicyContainer']/@subContainerMappings[name='Policy']" targetMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']" targetFinderExpression="feature:policy">
             <style sizeComputationExpression="2">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <centerLabelStyleDescription labelSize="12" labelExpression="context">
@@ -130,8 +130,8 @@
               </centerLabelStyleDescription>
             </style>
           </edgeMappings>
-          <containerMappings name="PolicyContainer" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='PolicyEntityName']" domainClass="specification::PolicySpecification">
-            <subContainerMappings name="Policy" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='PolicyEntityName']" semanticCandidatesExpression="feature:eAllContents" domainClass="policy::PolicyContainer">
+          <containerMappings name="PolicyContainer" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='PolicyEntityName']" domainClass="specification::PCMSpecificationContainer">
+            <subContainerMappings name="Policy" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='PolicyEntityName']" semanticCandidatesExpression="feature:eAllContents" domainClass="specification::PolicySpecification">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:entityName">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -152,7 +152,7 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="policy::Policy" referenceName="policies"/>
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="specification::PolicySpecification" referenceName="policyspecification"/>
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
@@ -168,8 +168,8 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="contexts" valueExpression="var:target"/>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="policyspecification" valueExpression="var:source"/>
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>

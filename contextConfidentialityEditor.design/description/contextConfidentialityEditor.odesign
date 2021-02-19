@@ -101,8 +101,19 @@
               </initialOperation>
             </ownedTools>
           </toolSections>
+          <toolSections name="ContainerCreation">
+            <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="ContextContainer" containerMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool:CreateInstance" referenceName="ContextContainers"/>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
+          </toolSections>
         </defaultLayer>
-        <additionalLayers name="PolicyLayer">
+        <additionalLayers name="PolicyLayer" activeByDefault="true">
           <edgeMappings name="policyContextRelation" sourceMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@containerMappings[name='PCMSpecificationContainer']" targetMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@containerMappings[name='PCMSpecificationContainer']/@subContainerMappings[name='PolicySpecification']" targetFinderExpression="feature:policyspecification">
             <style sizeComputationExpression="2">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -166,12 +177,12 @@
           </toolSections>
         </additionalLayers>
       </ownedRepresentations>
-      <ownedRepresentationExtensions xsi:type="description_1:DiagramExtensionDescription" name="SEFF_Extension" viewpointURI="viewpoint:/org.palladiosimulator.editors.sirius.seff/Seff" representationName="Seff Diagram">
+      <ownedRepresentationExtensions xsi:type="description_1:DiagramExtensionDescription" name="Assembly Extension" viewpointURI="viewpoint:/org.palladiosimulator.editors.sirius.seff/Seff" representationName="Seff Diagram">
         <metamodel href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#//policy"/>
         <metamodel href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#//model"/>
         <metamodel href="http://www.palladiosimulator.org/pcm/confidentiality/0.1/#/"/>
-        <layers name="PolicyLayer">
-          <containerMappings name="Policy" semanticCandidatesExpression="feature:eAllContents" domainClass="assembly::SystemPolicySpecification">
+        <layers name="AssemblyLayer">
+          <containerMappings name="MethodSpecification" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='Assembly%20Extension']/@layers[name='AssemblyLayer']/@toolSections.0/@ownedTools[name='PolicyEntityName']" domainClass="assembly::MethodSpecification">
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:entityName">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -179,34 +190,25 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </containerMappings>
-          <containerMappings name="PolicyContainer" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='PolicyEntityName']" domainClass="specification::PolicySpecification">
-            <subContainerMappings name="Policy" labelDirectEdit="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='PolicyEntityName']" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@toolSections.0/@ownedTools[name='ContextConfidentiality%20Representation']" domainClass="policy::Policy">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:entityName">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              </style>
-            </subContainerMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:entityName">
+          <containerMappings name="AttributeProvider" semanticCandidatesExpression="feature:eAllContents" domainClass="assembly::AttributeProvider">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression=" feature:entityName">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </containerMappings>
-          <toolSections name="Policies">
-            <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Create New Policy" containerMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@containerMappings[name='Policy']">
+          <toolSections name="PolicySpecification">
+            <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="SystemPolicySpecification" containerMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@containerMappings[name='PCMSpecificationContainer']/@subContainerMappings[name='PolicySpecification']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ExternalJavaAction" name="Add New Policy To Seff" id="AddNewPolicyToSeff">
-                  <parameters name="container" value="var:container"/>
-                  <parameters name="containerView" value="var:containerView"/>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="assembly::SystemPolicySpecification" referenceName="SystemPolicySpecification"/>
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
-            <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Add Existing Policy" forceRefresh="true" containerMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@containerMappings[name='Policy']">
+            <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Add Existing Policy" forceRefresh="true">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -216,7 +218,7 @@
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
-            <ownedTools xsi:type="tool_1:DoubleClickDescription" name="ContextConfidentiality Representation" mappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@containerMappings[name='PolicyContainer']/@subContainerMappings[name='Policy']">
+            <ownedTools xsi:type="tool_1:DoubleClickDescription" name="ContextConfidentiality Representation">
               <element name="element"/>
               <elementView name="elementView"/>
               <initialOperation>
@@ -235,7 +237,7 @@
               </initialOperation>
             </ownedTools>
             <subSections name="Policies">
-              <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Create New Policy" containerMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@containerMappings[name='Policy']">
+              <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Create New Policy">
                 <variable name="container"/>
                 <viewVariable name="containerView"/>
                 <initialOperation>
@@ -245,7 +247,7 @@
                   </firstModelOperations>
                 </initialOperation>
               </ownedTools>
-              <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Add Existing Policy" forceRefresh="true" containerMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentationExtensions[name='SEFF_Extension']/@layers[name='PolicyLayer']/@containerMappings[name='Policy']">
+              <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="Add Existing Policy" forceRefresh="true">
                 <variable name="container"/>
                 <viewVariable name="containerView"/>
                 <initialOperation>

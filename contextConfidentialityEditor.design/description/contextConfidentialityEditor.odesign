@@ -209,7 +209,7 @@
           </edgeMappings>
           <containerMappings name="ContextSetContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="set::ContextSetContainer">
             <subContainerMappings name="ContextSet" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@toolSections.0/@ownedTools[name='Choose%20Contexts']" domainClass="set::ContextSet">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:entityName">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.entityName + '\n' + self.contexts.entityName->sortedBy(str|str.toLower()->first())->sep(', ')">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -248,7 +248,7 @@
                     <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@toolSections.0/@ownedTools[name='Choose%20Contexts']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0 /0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@toolSections.0/@ownedTools[name='Choose%20Contexts']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.1"/>
                     <groups name="SelectContexts" labelExpression="Selectable Contexts" semanticCandidateExpression="var:self">
                       <controls xsi:type="properties:ContainerDescription" name="possible">
-                        <controls xsi:type="properties:ListDescription" name="Possible" valueExpression="aql:element.ancestors().contextContainer.context" displayExpression="aql:value.entityName">
+                        <controls xsi:type="properties:ListDescription" name="Possible" valueExpression="aql:element.ancestors().contextContainer.context-element.contexts" displayExpression="aql:value.entityName">
                           <actions labelExpression="Add">
                             <initialOperation>
                               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
@@ -279,12 +279,6 @@
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
-            </ownedTools>
-            <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="s" candidatesExpression="aql:self.ancestors().contextContainer.context">
-              <element name="element"/>
-              <containerView name="containerView"/>
-              <container name="container"/>
-              <initialOperation/>
             </ownedTools>
           </toolSections>
         </additionalLayers>

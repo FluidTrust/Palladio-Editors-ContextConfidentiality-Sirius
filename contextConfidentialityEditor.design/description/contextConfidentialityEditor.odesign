@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:emfprofileapplication="http://www.modelversioning.org/emfprofile/application/1.1" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0">
   <description:Group name="contextConfidentialityEditor" version="12.0.0.2017041100">
     <ownedViewpoints name="ContextConfidentiality Viewpoint">
       <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ContextConfidentiality Diagram" domainClass="context::ConfidentialAccessSpecification">
@@ -82,7 +82,7 @@
                 <firstModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="var:0"/>
               </initialOperation>
             </ownedTools>
-            <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="setParent" edgeMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='contextContextParentRelation']">
+            <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="setIncluding" edgeMappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@edgeMappings[name='contextContextParentRelation']">
               <sourceVariable name="source"/>
               <targetVariable name="target"/>
               <sourceViewVariable name="sourceView"/>
@@ -127,7 +127,7 @@
           <edgeMappings name="PolicyConnection" sourceMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='PolicyLayer']/@containerMappings[name='PCMSpecificationContainer']/@subContainerMappings[name='PolicySpecification']" targetMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@containerMappings[name='ContextSetContainer']/@subContainerMappings[name='ContextSet']" targetFinderExpression="feature:policy">
             <style sizeComputationExpression="2">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              <centerLabelStyleDescription labelSize="12" labelExpression="TEST">
+              <centerLabelStyleDescription labelSize="12" labelExpression="Policy">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </centerLabelStyleDescription>
             </style>
@@ -199,8 +199,16 @@
           </toolSections>
         </additionalLayers>
         <additionalLayers name="Set Layer" activeByDefault="true">
-          <containerMappings name="ContextSetContainer" domainClass="set::ContextSetContainer">
-            <subContainerMappings name="ContextSet" semanticCandidatesExpression="feature:eAllContents" domainClass="set::ContextSet">
+          <edgeMappings name="TestEdge" sourceMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@containerMappings[name='ContextSetContainer']/@subContainerMappings[name='ContextSet']" targetMapping="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@defaultLayer/@containerMappings[name='ContextContainer']/@subContainerMappings[name='ContextAttribute']">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription labelSize="12">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </edgeMappings>
+          <containerMappings name="ContextSetContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="set::ContextSetContainer">
+            <subContainerMappings name="ContextSet" semanticCandidatesExpression="feature:eAllContents" doubleClickDescription="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@toolSections.0/@ownedTools[name='Choose%20Contexts']" domainClass="set::ContextSet">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:entityName">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -224,6 +232,59 @@
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="set::ContextSet" referenceName="policies"/>
                 </firstModelOperations>
               </initialOperation>
+            </ownedTools>
+            <ownedTools xsi:type="tool_1:DoubleClickDescription" name="Choose Contexts" mappings="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@containerMappings[name='ContextSetContainer']/@subContainerMappings[name='ContextSet']">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation/>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation/>
+                    </buttons>
+                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="/0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@toolSections.0/@ownedTools[name='Choose%20Contexts']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0 /0/@ownedViewpoints[name='ContextConfidentiality%20Viewpoint']/@ownedRepresentations[name='ContextConfidentiality%20Diagram']/@additionalLayers[name='Set%20Layer']/@toolSections.0/@ownedTools[name='Choose%20Contexts']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.1"/>
+                    <groups name="SelectContexts" labelExpression="Selectable Contexts" semanticCandidateExpression="var:self">
+                      <controls xsi:type="properties:ContainerDescription" name="possible">
+                        <controls xsi:type="properties:ListDescription" name="Possible" valueExpression="aql:element.ancestors().contextContainer.context" displayExpression="aql:value.entityName">
+                          <actions labelExpression="Add">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:SetValue" featureName="contexts" valueExpression="var:selection"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </actions>
+                        </controls>
+                        <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
+                      </controls>
+                      <style barStyle="SHORT_TITLE_BAR" toggleStyle="NONE" expandedByDefault="true"/>
+                    </groups>
+                    <groups name="chosenContexts" labelExpression="Selected Contexts" semanticCandidateExpression="var:self">
+                      <controls xsi:type="properties:ContainerDescription" name="chosen">
+                        <controls xsi:type="properties:ListDescription" name="Selected" valueExpression="aql:element.contexts" displayExpression="aql:value.entityName">
+                          <actions labelExpression="Del">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self">
+                                <subModelOperations xsi:type="tool:Unset" featureName="contexts" elementExpression="var:selection"/>
+                              </firstModelOperations>
+                            </initialOperation>
+                          </actions>
+                        </controls>
+                        <layout xsi:type="properties:FillLayoutDescription" orientation="HORIZONTAL"/>
+                      </controls>
+                      <style barStyle="SHORT_TITLE_BAR" toggleStyle="NONE" expandedByDefault="true"/>
+                    </groups>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
+            <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="s" candidatesExpression="aql:self.ancestors().contextContainer.context">
+              <element name="element"/>
+              <containerView name="containerView"/>
+              <container name="container"/>
+              <initialOperation/>
             </ownedTools>
           </toolSections>
         </additionalLayers>

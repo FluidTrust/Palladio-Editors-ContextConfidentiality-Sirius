@@ -60,7 +60,7 @@ For further development of the editor follow these installation steps:
     * Includes Relation
     * Policy Relation
     * Attribute Inclusion Relation
-    </p><img title="Context Confidentiality Model" src="Screenshots/context_editor.png" width="500" />
+    </p><img title="Context Confidentiality Model" src="Screenshots/context_editor.png" width="650" />
 
 * With double-clicking on a Hierarchical Context its property *direction* can be set. The direction allows to define whether the child elements or the parent elements are included in the hierarchy of the analysis.
     </p><img title="Set Direction" src="Screenshots/DirectionWizard.png" width="300" />
@@ -80,15 +80,15 @@ For further development of the editor follow these installation steps:
 * Double-clicking on Context Set, showing a list of possible Attributes and a list of already added Attributes for simple setting of its *contexts* property
     </p><img title="Set Context Attribute" src="Screenshots/ContextAttributeSelection.png" width="400" />
 * Showing only the alphabetically sorted names of included Context Attributes in Context Sets to keep the context editor from cluttering
-    </p><img title="Set Contexts" src="Screenshots/ContextAttributeName.png" width="300" />
+    </p><img title="Set Contexts" src="Screenshots/ContextAttributeName.png" width="200" />
 * Simple modification of a container's name by clicking on its label
     </p><img title="Modify Name" src="Screenshots/ChangeName.png" width="150" />
 * Policy and Context Attributes are drawn on different layers
     </p> &rarr; Provides possibility to hide the entire Policy Container
-    </p><img title="Layers" src="Screenshots/ChooseLayer.png" width="300" />
+    </p><img title="Layers" src="Screenshots/ChooseLayer.png" width="150" />
 * Implementation of a PolicyFilter  
     </p> &rarr; Provides possibility to hide specific Policies.
-    </p><img title="PolicyFilter" src="Screenshots/Filter.png" width="300" />
+    </p><img title="PolicyFilter" src="Screenshots/Filter.png" width="150" />
 ---
 
 ### Authors

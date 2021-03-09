@@ -13,6 +13,7 @@ The project was implemented within the scope of the practical master course *Ing
 * [Further Development](#further-Development)
 * [Functionalities](#functionalities)
 * [Design decisions](#design-decisions)
+* [Future Work](#future-work)
 * [Authors](#authors)
 
 ## Technologies:
@@ -25,21 +26,18 @@ The project is built with:
 Following dependencies exist:
 
 * [Palladio Component Model](https://sdqweb.ipd.kit.edu/wiki/Palladio_Component_Model)
-* [Context Metamodel](https://github.com/Trust40-Project/Palladio-Addons-DataProcessing-DynamicExtension-ContextModel/tree/context2.0)
-* [MDSD Profiles](https://sdqweb.ipd.kit.edu/wiki/MDSDProfiles)
+* [Context Metamodel](https://github.com/FluidTrust/Palladio-Addons-ContextConfidentiality-Metamodel)
 
 ## Further Development
 For further development of the editor follow these installation steps:
-1. Download and install [Eclipse Modeling Tools](https://www.eclipse.org/downloads/packages/release/2020-06/r/eclipse-modeling-tools)
+1. Download and install [Eclipse Modeling Tools](https://www.eclipse.org/downloads/packages/release/2020-09/r/eclipse-modeling-tools)
 1. Install the *Sirius Project* through the *Eclipse Marketplace*
 1. Download and install *Eclipse plugin dependencies for Palladio development*
     * Go to Eclipse &rarr; Help &rarr; Install New Software
     * Install Palladio from the composite update site: https://updatesite.palladio-simulator.com/palladio-build-updatesite/nightly/
-1. Clone and import the *ContextConfidentality Metamodel* repository 
-    ```shell
-    $ git clone https://github.com/Trust40-Project/Palladio-Addons-DataProcessing-DynamicExtension-ContextModel.git 
-    ```
-    and checkout the branch **context2.0**
+1. Download and install *ContextConfidentiality Metamodel*
+    * Go to Eclipse &rarr; Help &rarr; Install New Software
+    * Install the Metamodel from the update site: https://updatesite.palladio-simulator.com/fluidtrust/palladio-addons-contextconfidentiality-metamodel/nightly/
 1. Clone and Import the *ContextConfidentiality Editor* repository
     ```shell
     $ git clone https://github.com/Trust40-Project/context-confidentiality-editor.git
@@ -89,6 +87,12 @@ For further development of the editor follow these installation steps:
 * Implementation of a PolicyFilter  
     </p> &rarr; Provides possibility to hide specific Policies.
     </p><img title="PolicyFilter" src="Screenshots/Filter.png" width="150" />
+    
+## Future Work
+
+* PCM-integration
+* Add the attacker model
+    
 ---
 
 ### Authors

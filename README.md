@@ -78,7 +78,7 @@ For further development of the editor follow these installation steps:
 * Double-clicking on Context Set, showing a list of possible Attributes and a list of already added Attributes for simple setting of its *contexts* property
     </p><img title="Set Context Attribute" src="Screenshots/ContextAttributeSelection.png" width="400" />
 * Showing only the alphabetically sorted names of included Context Attributes in Context Sets to keep the context editor from cluttering
-    </p><img title="Set Contexts" src="Screenshots/ContextAttributeName.png" width="200" />
+    </p><img title="Set Contexts" src="Screenshots/ContextAttributeNamechanged.png" width="200" />
 * Simple modification of a container's name by clicking on its label
     </p><img title="Modify Name" src="Screenshots/ChangeName.png" width="150" />
 * Policy and Context Attributes are drawn on different layers

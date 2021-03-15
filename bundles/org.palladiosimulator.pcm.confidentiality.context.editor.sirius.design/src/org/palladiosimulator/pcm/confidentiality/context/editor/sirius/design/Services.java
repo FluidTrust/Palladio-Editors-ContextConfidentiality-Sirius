@@ -1,4 +1,4 @@
-package contextConfidentialityEditor.design;
+package org.palladiosimulator.pcm.confidentiality.context.editor.sirius.design;
 
 import org.eclipse.emf.ecore.EObject;
 

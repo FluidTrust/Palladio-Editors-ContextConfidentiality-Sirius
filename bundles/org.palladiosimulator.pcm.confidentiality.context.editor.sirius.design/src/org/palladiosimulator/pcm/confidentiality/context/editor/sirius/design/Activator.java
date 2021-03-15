@@ -1,4 +1,4 @@
-package contextConfidentialityEditor.design;
+package org.palladiosimulator.pcm.confidentiality.context.editor.sirius.design;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
     // The plug-in ID
-    public static final String PLUGIN_ID = "contextConfidentialityEditor.design";
+    public static final String PLUGIN_ID = "org.palladiosimulator.pcm.confidentiality.context.editor.sirius.design";
 
     // The shared instance
     private static Activator plugin;

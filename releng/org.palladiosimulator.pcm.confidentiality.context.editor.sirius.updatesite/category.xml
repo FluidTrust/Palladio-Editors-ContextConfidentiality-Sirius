@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.palladiosimulator.pcm.confidentiality.context.editor.sirius.feature">
+      <category name="org.palladiosimulator.pcm.confidentiality.context.category"/>
+   </feature>
+      <feature id="org.palladiosimulator.pcm.confidentiality.context.editor.sirius.source.feature">
+      <category name="org.palladiosimulator.pcm.confidentiality.context.source.category"/>
+   </feature>
+   <category-def name="org.palladiosimulator.pcm.confidentiality.context.category" label="Confidentiality Context">
+   </category-def>
+   <category-def name="org.palladiosimulator.pcm.confidentiality.context.source.category" label="Confidentiality Context Developer Resources">
+   </category-def>
+</site>
+

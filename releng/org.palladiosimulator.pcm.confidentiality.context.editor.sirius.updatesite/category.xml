@@ -3,7 +3,7 @@
    <feature id="org.palladiosimulator.pcm.confidentiality.context.editor.sirius.feature">
       <category name="org.palladiosimulator.pcm.confidentiality.context.category"/>
    </feature>
-      <feature id="org.palladiosimulator.pcm.confidentiality.context.editor.sirius.source.feature">
+   <feature id="org.palladiosimulator.pcm.confidentiality.context.editor.sirius.feature.source">
       <category name="org.palladiosimulator.pcm.confidentiality.context.source.category"/>
    </feature>
    <category-def name="org.palladiosimulator.pcm.confidentiality.context.category" label="Confidentiality Context">
